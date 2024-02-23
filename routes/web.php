@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// capture anything after the url, will redirect you to the home page.
 Route::get('/{vue_capture?}', function () {
     return view('welcome');
 })->where('vue_capture', '[\/\w\.-]*');
